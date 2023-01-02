@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-12T19:03:01.905Z",
+    "end": "2022-12-12T19:03:12.647Z",
+    "duration": 10742,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "621fba7a-9c38-4aab-af3f-510bff362ad4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TestFramework.cy.js",
+      "file": "cypress\\e2e\\TestFramework.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8d1f902a-e4df-43c7-b899-f2983108da0e",
+          "title": "Test Automation Framework for RSA website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "First Test case of Framework",
+              "fullTitle": "Test Automation Framework for RSA website First Test case of Framework",
+              "timedOut": null,
+              "duration": 960,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit(\"https://rahulshettyacademy.com/angularpractice/\")\ncy.visit(this.data.url); //cy.visit(Cypress.envVariable('baseUrl') + \"/angularpractice/\")\nhomePage.getEditBox().type(this.data.name);\nhomePage.getGender().select(this.data.gender);\nhomePage.getTwoWayDataBinding().should('have.value', this.data.name);\nhomePage.getMinLength().should('have.attr', \"minlength\", \"2\");\nhomePage.getEnterpreneur().should('be.disabled');",
+              "err": {},
+              "uuid": "f8f1d2d9-24f0-4013-8dc4-842fab1e00d4",
+              "parentUUID": "8d1f902a-e4df-43c7-b899-f2983108da0e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shop login for mobile purchase",
+              "fullTitle": "Test Automation Framework for RSA website Shop login for mobile purchase",
+              "timedOut": null,
+              "duration": 7889,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getShopButton().click();\n/*this.data.product.forEach(function (element) {\n    cy.AddToCart(element)\n})*/\ncy.AddToCart(\"Blackberry\");\nproductsPage.getCheckOut().click();\ncheckOutPage.getCheckOutButton().click({\n  force: true\n});\ncheckOutPage.getEnterCountryName().type('india');\ncheckOutPage.getClickPopUPCountryName().click();\ncheckOutPage.getCheckBoxClick().click({\n  force: true\n});\ncheckOutPage.getPurchaseButtonClick().click();\ncheckOutPage.getSuccessMessage().then(function (successText) {\n  const text = successText.text();\n  console.log(text);\n  expect(text.includes('Success!')).to.be.true;\n});",
+              "err": {},
+              "uuid": "0bc03744-ecf8-4778-b6e5-950bf32005c3",
+              "parentUUID": "8d1f902a-e4df-43c7-b899-f2983108da0e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f8f1d2d9-24f0-4013-8dc4-842fab1e00d4",
+            "0bc03744-ecf8-4778-b6e5-950bf32005c3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8849,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
