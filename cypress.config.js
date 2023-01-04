@@ -17,8 +17,8 @@ module.exports = defineConfig({
   projectId: 'itv4ko',
   e2e: {
     setupNodeEvents,
-    //specPattern: 'cypress/e2e/BDD/*.feature'
-    specPattern: 'cypress/e2e/*.cy.js'
+    specPattern: 'cypress/e2e/BDD/*.feature'
+    //specPattern: 'cypress/e2e/*.cy.js'
   },
   defaultCommandTimeout: 8000,
   envVariable:
