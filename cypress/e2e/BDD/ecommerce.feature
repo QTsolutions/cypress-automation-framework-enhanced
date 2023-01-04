@@ -21,3 +21,4 @@ Feature: E2E testing of Ecommerce website
             | Rahul |
 
         Then  Click on shop Button
+

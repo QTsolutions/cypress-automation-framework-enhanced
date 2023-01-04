@@ -14,7 +14,7 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
-  projectId: 'ztko1i',
+  projectId: 'itv4ko',
   e2e: {
     setupNodeEvents,
     //specPattern: 'cypress/e2e/BDD/*.feature'
